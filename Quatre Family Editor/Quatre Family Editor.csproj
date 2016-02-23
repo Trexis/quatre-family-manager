@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F62E8EB-5A02-43C1-878A-F89EF81FEFEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quatre_Family_Editor</RootNamespace>
+    <AssemblyName>Quatre Family Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tredoux_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="htmlExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="htmlExportForm.Designer.cs">
+      <DependentUpon>htmlExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listFamiliesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listFamiliesForm.Designer.cs">
+      <DependentUpon>listFamiliesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listIndividualsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listIndividualsForm.Designer.cs">
+      <DependentUpon>listIndividualsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="individualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="individualForm.Designer.cs">
+      <DependentUpon>individualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gedReaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gedReaderForm.Designer.cs">
+      <DependentUpon>gedReaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GEDReader.cs" />
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="familyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="familyForm.Designer.cs">
+      <DependentUpon>familyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="htmlExportForm.resx">
+      <DependentUpon>htmlExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listFamiliesForm.resx">
+      <DependentUpon>listFamiliesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="individualForm.resx">
+      <DependentUpon>individualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gedReaderForm.resx">
+      <DependentUpon>gedReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listIndividualsForm.resx">
+      <DependentUpon>listIndividualsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="familyForm.resx">
+      <DependentUpon>familyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quatre\Quatre.csproj">
+      <Project>{b17bd384-aee2-49b2-8eed-28ee6952b534}</Project>
+      <Name>Quatre</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tredoux_logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
